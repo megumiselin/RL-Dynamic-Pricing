@@ -24,6 +24,19 @@ This project shows how an RL-based approach can:
 - Provide actionable recommendations to decision-makers  
 
 ---
+## Methodology
+- **Custom RL Environment**: `DynamicPricingEnv` simulates demand, competition, seasonality, and inventory.  
+- **Replay Buffer**: Implemented to stabilize agent learning.  
+- **DQN and Double DQN**: Trained with TensorFlow/Keras to explore price actions and maximize long-term rewards.  
+- **Evaluation**: RL strategies compared against static baselines (low, medium, high price).  
+---
+### Technical Details
+- A custom simulator, `DynamicPricingEnv`, was implemented to replicate realistic pricing conditions such as demand shifts, competitor actions, seasonality, and inventory constraints.  
+- Two RL methods were applied:  
+  - **Deep Q-Learning (DQN)** to estimate action values and choose optimal prices.  
+  - **Double DQN** to address overestimation bias and improve stability.  
+- The environment and agents were built in Python using TensorFlow/Keras, NumPy, and supporting libraries.  
+---
 
 ## Key Insights
 - **Static low-price strategy** drives sales but reduces overall profitability.  
